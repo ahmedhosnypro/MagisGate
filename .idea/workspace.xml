@@ -1,5 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml">
+        <config>
+          <theme>@style/Theme.MagisGate</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f7d54a5-da2c-4e0f-b194-1a4b3606f66b" name="Changes" comment="MagisGate: Rebrand project and migrate to native Android root&#10;&#10;* Rename project from RootInjector to MagisGate and update package name to `com.ahmedhosnypro.magisgate`.&#10;* Remove Flutter project and move native Android Compose app to the root directory.&#10;* Implement bulk policy injection and removal features with multi-select support.&#10;* Add GitHub Actions workflow for manual release builds.&#10;* Add Fastlane metadata and GPL v3 license.&#10;* Upgrade Gradle to 9.4.1 and update dependencies.&#10;* Optimize root operations, including force-stopping apps after policy changes and improving UID lookup performance.">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/android.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/fastlane/metadata/android/en-US/full_description.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/fastlane/metadata/android/en-US/short_description.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/fastlane/metadata/android/en-US/title.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/AppViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/MagisGateApp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/data/RootRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/model/AppInfo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/model/FilterSort.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/model/LogEntry.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/components/AppListItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/components/ConfirmationSheet.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/components/FilterSheet.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/components/LogsTab.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/components/SearchBarRow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahmedhosnypro/magisgate/ui/screens/AppListScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="30231f61-da8b-40bc-bfeb-a5dbe8524f21" name="staged changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idx/dev.nix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idx/mcp.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/release.keystore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/AppViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/RootInjectorApp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/data/RootRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/model/AppInfo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/model/FilterSort.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/model/LogEntry.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/components/AppListItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/components/ConfirmationSheet.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/components/FilterSheet.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/components/LogsTab.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/components/SearchBarRow.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/java/com/example/rootinjector/ui/screens/AppListScreen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composeapp/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/AGENT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/GEMINI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/analysis_options.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/kotlin/com/example/myapp/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/build/reports/problems/problems-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/android/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/blueprint.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/models/filter_sort.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/models/log_entry.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/providers/app_providers.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/screens/app_list_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/app_list_item.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/confirmation_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/filter_sheet.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/logs_tab.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/root_status_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/lib/widgets/search_bar_row.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_flutter.sh" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RootInjector" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
@@ -13,24 +197,202 @@
       </file>
     </leaf>
   </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ahmedhosnypro&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ahmedhosnypro/ManualRoot.git&quot;,
+    &quot;accountId&quot;: &quot;2523ebb5-6cdb-409f-8b8f-c3428a6f8600&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.5.0-all/aca6g93cdtcf0oapcfka748qh/gradle-9.5.0" javaHome="$APPLICATION_HOME_DIR$/jbr" gradleVersion="9.5.0">
+    <option name="jvmArguments">
+      <list>
+        <option value="-Didea.compose.hot-reload=true" />
+        <option value="-Didea.compose.hot-reload.version=2" />
+      </list>
+    </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="186" changelist="7f7d54a5-da2c-4e0f-b194-1a4b3606f66b" />
+        <range start1="15" end1="20" start2="199" end2="233" changelist="7f7d54a5-da2c-4e0f-b194-1a4b3606f66b" />
+        <range start1="21" end1="21" start2="234" end2="239" changelist="30231f61-da8b-40bc-bfeb-a5dbe8524f21" />
+        <range start1="22" end1="24" start2="240" end2="241" changelist="30231f61-da8b-40bc-bfeb-a5dbe8524f21" />
+        <range start1="30" end1="34" start2="247" end2="396" changelist="7f7d54a5-da2c-4e0f-b194-1a4b3606f66b" />
+        <range start1="36" end1="37" start2="398" end2="398" changelist="30231f61-da8b-40bc-bfeb-a5dbe8524f21" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DSr6DYo2tNgxBu9ZZxkFCQwvq8" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-    </navigator>
+    <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
       <pane id="ProjectPane">
         <option name="show-excluded-files" value="false" />
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Android App.app.executor": "Run",
+    "Gradle.Configure Daemon JVM Criteria.executor": "Run",
+    "GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.customizations"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="com.ahmedhosnypro.rootinjector" />
+      <recent name="com.ahmedhosnypro" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="MagisGate.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f7d54a5-da2c-4e0f-b194-1a4b3606f66b" name="Changes" comment="" />
+      <changelist id="30231f61-da8b-40bc-bfeb-a5dbe8524f21" name="staged changes" comment="" />
+      <created>1778286135411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778286135411</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="FlutterRunConfigurationType" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MagisGate: Rebrand project and migrate to native Android root&#10;&#10;* Rename project from RootInjector to MagisGate and update package name to `com.ahmedhosnypro.magisgate`.&#10;* Remove Flutter project and move native Android Compose app to the root directory.&#10;* Implement bulk policy injection and removal features with multi-select support.&#10;* Add GitHub Actions workflow for manual release builds.&#10;* Add Fastlane metadata and GPL v3 license.&#10;* Upgrade Gradle to 9.4.1 and update dependencies.&#10;* Optimize root operations, including force-stopping apps after policy changes and improving UID lookup performance." />
+    <option name="LAST_COMMIT_MESSAGE" value="MagisGate: Rebrand project and migrate to native Android root&#10;&#10;* Rename project from RootInjector to MagisGate and update package name to `com.ahmedhosnypro.magisgate`.&#10;* Remove Flutter project and move native Android Compose app to the root directory.&#10;* Implement bulk policy injection and removal features with multi-select support.&#10;* Add GitHub Actions workflow for manual release builds.&#10;* Add Fastlane metadata and GPL v3 license.&#10;* Upgrade Gradle to 9.4.1 and update dependencies.&#10;* Optimize root operations, including force-stopping apps after policy changes and improving UID lookup performance." />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.ahmedhosnypro.magisgate">
+          <value>
+            <CheckInfo lastCheckTimestamp="1778334759507" />
+          </value>
+        </entry>
+        <entry key="com.ahmedhosnypro.magisgate.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1778334759503" />
+          </value>
+        </entry>
+        <entry key="com.ahmedhosnypro.rootinjector">
+          <value>
+            <CheckInfo lastCheckTimestamp="1778328397738" />
+          </value>
+        </entry>
+        <entry key="com.ahmedhosnypro.rootinjector.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1778328397739" />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

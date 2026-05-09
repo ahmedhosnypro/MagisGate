@@ -1,2 +1,0 @@
--keep class com.topjohnwu.superuser.** { *; }
--keep class com.example.rootinjector.** { *; }

@@ -1,0 +1,10 @@
+MagisGate is an open-source tool designed for power users who need to monitor system activities and manage application details on rooted Android devices.
+
+Key features include:
+- Comprehensive log viewer with filtering and sorting capabilities.
+- Detailed application information (package name, install time, size, etc.).
+- Advanced filtering and sorting for your installed apps.
+- Clean and intuitive Material 3 user interface.
+- Built for performance and privacy.
+
+MagisGate requires root access for its core logging features but provides useful app management tools even without it.
