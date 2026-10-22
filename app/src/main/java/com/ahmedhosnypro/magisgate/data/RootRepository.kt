@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
+import android.util.Log
 import com.ahmedhosnypro.magisgate.model.AppInfo
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
@@ -12,6 +13,8 @@ import kotlinx.coroutines.withContext
 import java.io.File
 
 object RootRepository {
+
+    private const val TAG = "MagisGate"
 
     // ── Root Check ────────────────────────────────────────────────────────────
 
@@ -30,7 +33,12 @@ object RootRepository {
             @Suppress("DEPRECATION")
             pm.getInstalledPackages(0)
         }
-        packages.mapNotNull { pkg ->
+        Log.i(TAG, "[Apps] pm returned ${packages.size} packages")
+        val launcherless = packages.count { pkg ->
+            pm.getLaunchIntentForPackage(pkg.packageName) == null
+        }
+        Log.i(TAG, "[Apps] $launcherless packages have no launch activity")
+        val apps = packages.mapNotNull { pkg ->
             val ai = pkg.applicationInfo ?: return@mapNotNull null
             AppInfo(
                 appName = pm.getApplicationLabel(ai).toString(),
@@ -43,6 +51,8 @@ object RootRepository {
                 apkSize = runCatching { File(ai.sourceDir).length() }.getOrDefault(0L),
             )
         }
+        Log.i(TAG, "[Apps] mapped ${apps.size} entries")
+        apps
     }
 
     // ── Granted UIDs ──────────────────────────────────────────────────────────

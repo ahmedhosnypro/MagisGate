@@ -1,6 +1,7 @@
 package com.ahmedhosnypro.magisgate
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.ahmedhosnypro.magisgate.data.RootRepository
@@ -19,6 +20,8 @@ import kotlinx.coroutines.launch
 import kotlin.collections.plus
 
 class AppViewModel(app: Application) : AndroidViewModel(app) {
+
+    private val tag = "MagisGate"
 
     // ── Root Check ────────────────────────────────────────────────────────────
     val isRooted = MutableStateFlow<Boolean?>(null) // null = loading
@@ -104,10 +107,12 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     private fun loadAll() {
         viewModelScope.launch {
+            Log.i(tag, "loadAll: starting (root check + app enumeration)")
             isRooted.value = RootRepository.checkRoot()
             val apps = RootRepository.getInstalledApps(getApplication())
             allApps.value = apps
             isLoadingApps.value = false
+            Log.i(tag, "loadAll: rooted=${isRooted.value}, apps=${apps.size}")
 
             if (isRooted.value == true) {
                 val uids = RootRepository.getGrantedRootUids(::addLog)
