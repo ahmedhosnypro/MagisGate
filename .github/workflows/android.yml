@@ -3,14 +3,6 @@ name: Manual Release Build
 on:
   workflow_dispatch:
     inputs:
-      version_name:
-        description: 'Version Name (e.g. 1.0.1)'
-        required: true
-        default: '1.0.1'
-      version_code:
-        description: 'Version Code (must be higher than previous)'
-        required: true
-        default: '2'
       release_notes:
         description: 'Release Notes'
         required: false
@@ -32,6 +24,12 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
+    - name: Read version from build.gradle.kts
+      id: ver
+      run: |
+        echo "name=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)" >> "$GITHUB_OUTPUT"
+        echo "code=$(grep -oP 'versionCode = \K[0-9]+' app/build.gradle.kts)" >> "$GITHUB_OUTPUT"
+
     - name: Decode Keystore
       env:
         ENCODED_STRING: ${{ secrets.KEYSTORE_BASE64 }}
@@ -45,13 +43,13 @@ jobs:
         KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'android' }}
         KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'magisgate' }}
         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'android' }}
-      run: ./gradlew assembleRelease -PversionName=${{ github.event.inputs.version_name }} -PversionCode=${{ github.event.inputs.version_code }}
+      run: ./gradlew assembleRelease
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: v${{ github.event.inputs.version_name }}
-        name: MagisGate v${{ github.event.inputs.version_name }}
+        tag_name: v${{ steps.ver.outputs.name }}
+        name: MagisGate v${{ steps.ver.outputs.name }}
         body: ${{ github.event.inputs.release_notes }}
         files: app/build/outputs/apk/release/*.apk
         generate_release_notes: true
@@ -61,5 +59,5 @@ jobs:
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: MagisGate-Release-v${{ github.event.inputs.version_name }}
+        name: MagisGate-Release-v${{ steps.ver.outputs.name }}
         path: app/build/outputs/apk/release/*.apk

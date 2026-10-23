@@ -11,8 +11,8 @@ android {
         applicationId = "ahmedhosnypro.magisgate"
         minSdk = 23
         targetSdk = 37
-        versionCode = project.findProperty("versionCode")?.toString()?.toInt() ?: 1
-        versionName = project.findProperty("versionName")?.toString() ?: "1.0.0"
+        versionCode = 1
+        versionName = "1.0.0"
         // F-Droid builds for all supported ABIs by default
     }
 
