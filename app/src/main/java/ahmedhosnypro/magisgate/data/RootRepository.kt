@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.data
+package ahmedhosnypro.magisgate.data
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,7 +6,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.os.Build
 import android.util.Log
-import com.ahmedhosnypro.magisgate.model.AppInfo
+import ahmedhosnypro.magisgate.model.AppInfo
 import com.topjohnwu.superuser.Shell
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

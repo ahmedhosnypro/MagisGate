@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui.components
+package ahmedhosnypro.magisgate.ui.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -18,8 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
-import com.ahmedhosnypro.magisgate.model.AppInfo
-import com.ahmedhosnypro.magisgate.ui.ElectricPurple
+import ahmedhosnypro.magisgate.model.AppInfo
+import ahmedhosnypro.magisgate.ui.ElectricPurple
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

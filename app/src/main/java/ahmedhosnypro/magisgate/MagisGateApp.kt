@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate
+package ahmedhosnypro.magisgate
 
 import android.app.Application
 import com.topjohnwu.superuser.Shell

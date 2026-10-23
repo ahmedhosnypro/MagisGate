@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui.screens
+package ahmedhosnypro.magisgate.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -18,17 +18,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.ahmedhosnypro.magisgate.AppViewModel
-import com.ahmedhosnypro.magisgate.R
-import com.ahmedhosnypro.magisgate.model.AppInfo
-import com.ahmedhosnypro.magisgate.model.FilterSortState
-import com.ahmedhosnypro.magisgate.model.LogEntry
-import com.ahmedhosnypro.magisgate.ui.ElectricPurple
-import com.ahmedhosnypro.magisgate.ui.components.AppListItem
-import com.ahmedhosnypro.magisgate.ui.components.ConfirmationSheet
-import com.ahmedhosnypro.magisgate.ui.components.FilterSheet
-import com.ahmedhosnypro.magisgate.ui.components.LogsTab
-import com.ahmedhosnypro.magisgate.ui.components.SearchBarRow
+import ahmedhosnypro.magisgate.AppViewModel
+import ahmedhosnypro.magisgate.R
+import ahmedhosnypro.magisgate.model.AppInfo
+import ahmedhosnypro.magisgate.model.FilterSortState
+import ahmedhosnypro.magisgate.model.LogEntry
+import ahmedhosnypro.magisgate.ui.ElectricPurple
+import ahmedhosnypro.magisgate.ui.components.AppListItem
+import ahmedhosnypro.magisgate.ui.components.ConfirmationSheet
+import ahmedhosnypro.magisgate.ui.components.FilterSheet
+import ahmedhosnypro.magisgate.ui.components.LogsTab
+import ahmedhosnypro.magisgate.ui.components.SearchBarRow
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

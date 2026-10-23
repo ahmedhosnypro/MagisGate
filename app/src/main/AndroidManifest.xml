@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <application
-        android:name="com.ahmedhosnypro.magisgate.MagisGateApp"
+        android:name="ahmedhosnypro.magisgate.MagisGateApp"
         android:label="MagisGate"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -14,7 +14,7 @@
         android:supportsRtl="true">
 
         <activity
-            android:name="com.ahmedhosnypro.magisgate.MainActivity"
+            android:name="ahmedhosnypro.magisgate.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

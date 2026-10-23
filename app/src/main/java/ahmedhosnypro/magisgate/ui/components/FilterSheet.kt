@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui.components
+package ahmedhosnypro.magisgate.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -8,11 +8,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.ahmedhosnypro.magisgate.model.AppFilter
-import com.ahmedhosnypro.magisgate.model.FilterSortState
-import com.ahmedhosnypro.magisgate.model.SortBy
-import com.ahmedhosnypro.magisgate.model.SortOrder
-import com.ahmedhosnypro.magisgate.ui.ElectricPurple
+import ahmedhosnypro.magisgate.model.AppFilter
+import ahmedhosnypro.magisgate.model.FilterSortState
+import ahmedhosnypro.magisgate.model.SortBy
+import ahmedhosnypro.magisgate.model.SortOrder
+import ahmedhosnypro.magisgate.ui.ElectricPurple
 
 @Composable
 fun FilterSheet(state: FilterSortState, onUpdate: (FilterSortState) -> Unit) {

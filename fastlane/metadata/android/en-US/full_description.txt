@@ -1,0 +1,14 @@
+MagisGate is a lightweight root app manager for Magisk. It gives you a clean, fast way to control which apps are allowed root access — directly from your phone, without digging through the Magisk database.
+
+Features:
+• Grant or revoke Magisk superuser access for any installed app
+• Browse all installed apps with name, package, APK size, install/update time, and system/user badges
+• Search, filter, and sort apps (system/user, enabled/disabled)
+• Built-in operation log for every root action
+• Material 3 design, built with Jetpack Compose
+
+Requirements:
+• Rooted device with Magisk installed
+• Root (superuser) permission granted to MagisGate
+
+MagisGate is free and open source software, licensed under the GNU GPL v3.

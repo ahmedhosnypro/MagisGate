@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.model
+package ahmedhosnypro.magisgate.model
 
 import android.graphics.drawable.Drawable
 

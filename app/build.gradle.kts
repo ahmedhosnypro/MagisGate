@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ahmedhosnypro.magisgate"
+    namespace = "ahmedhosnypro.magisgate"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.ahmedhosnypro.magisgate"
+        applicationId = "ahmedhosnypro.magisgate"
         minSdk = 23
         targetSdk = 37
         versionCode = project.findProperty("versionCode")?.toString()?.toInt() ?: 1
@@ -24,6 +24,12 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
+    }
+
+    // Keep Play build-dependency metadata out of the APK (F-Droid scanner flag)
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
     }
 
     signingConfigs {
@@ -42,12 +48,18 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            
+
             // Further optimization
             ndk {
                 debugSymbolLevel = "none"
+            }
+            // F-Droid and fresh clones build without a keystore; sign only when one exists
+            signingConfigs.findByName("release")?.let { config ->
+                if (config.storeFile != null) signingConfig = config
+            }
+            vcsInfo {
+                include = false
             }
         }
     }

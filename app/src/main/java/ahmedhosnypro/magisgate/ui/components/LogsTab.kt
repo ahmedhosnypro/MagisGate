@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui.components
+package ahmedhosnypro.magisgate.ui.components
 
 import android.content.ClipData
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -20,7 +20,7 @@ import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ahmedhosnypro.magisgate.model.LogEntry
+import ahmedhosnypro.magisgate.model.LogEntry
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)

@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.model
+package ahmedhosnypro.magisgate.model
 
 import kotlin.time.Clock
 import kotlinx.datetime.LocalTime

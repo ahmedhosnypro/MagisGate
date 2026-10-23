@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui
+package ahmedhosnypro.magisgate.ui
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme

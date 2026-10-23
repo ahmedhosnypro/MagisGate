@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.ui.components
+package ahmedhosnypro.magisgate.ui.components
 
 import android.content.ClipData
 import androidx.compose.foundation.background
@@ -18,8 +18,8 @@ import androidx.compose.ui.platform.toClipEntry
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ahmedhosnypro.magisgate.model.AppInfo
-import com.ahmedhosnypro.magisgate.ui.ElectricPurple
+import ahmedhosnypro.magisgate.model.AppInfo
+import ahmedhosnypro.magisgate.ui.ElectricPurple
 import kotlinx.coroutines.launch
 
 @Composable

@@ -1,16 +1,16 @@
-package com.ahmedhosnypro.magisgate
+package ahmedhosnypro.magisgate
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.ahmedhosnypro.magisgate.data.RootRepository
-import com.ahmedhosnypro.magisgate.model.AppFilter
-import com.ahmedhosnypro.magisgate.model.AppInfo
-import com.ahmedhosnypro.magisgate.model.FilterSortState
-import com.ahmedhosnypro.magisgate.model.LogEntry
-import com.ahmedhosnypro.magisgate.model.SortBy
-import com.ahmedhosnypro.magisgate.model.SortOrder
+import ahmedhosnypro.magisgate.data.RootRepository
+import ahmedhosnypro.magisgate.model.AppFilter
+import ahmedhosnypro.magisgate.model.AppInfo
+import ahmedhosnypro.magisgate.model.FilterSortState
+import ahmedhosnypro.magisgate.model.LogEntry
+import ahmedhosnypro.magisgate.model.SortBy
+import ahmedhosnypro.magisgate.model.SortOrder
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

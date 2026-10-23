@@ -1,4 +1,4 @@
-package com.ahmedhosnypro.magisgate.model
+package ahmedhosnypro.magisgate.model
 
 enum class AppFilter { ALL, SYSTEM, USER, ENABLED, DISABLED }
 enum class SortBy { NAME, PACKAGE_NAME, APP_SIZE, INSTALL_DATE, UPDATE_DATE }
