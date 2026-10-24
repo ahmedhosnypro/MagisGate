@@ -1,0 +1,7 @@
+First release of MagisGate.
+
+- Grant or revoke Magisk superuser access for any installed app
+- Browse all installed apps with name, package, APK size, install/update time, and system/user badges
+- Search, filter, and sort apps (system/user, enabled/disabled)
+- Built-in operation log for every root action
+- Material 3 design, built with Jetpack Compose

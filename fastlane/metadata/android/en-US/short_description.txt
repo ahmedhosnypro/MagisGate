@@ -1,1 +1,1 @@
-Manage Magisk root policies per app, right from your phone.
+Manage Magisk root policies per app, right from your phone

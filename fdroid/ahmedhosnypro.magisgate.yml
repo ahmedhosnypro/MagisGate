@@ -1,6 +1,7 @@
 Categories:
   - System
 License: GPL-3.0-only
+AuthorName: Ahmed Hosny
 WebSite: https://github.com/ahmedhosnypro/MagisGate
 SourceCode: https://github.com/ahmedhosnypro/MagisGate
 IssueTracker: https://github.com/ahmedhosnypro/MagisGate/issues
@@ -13,7 +14,7 @@ Repo: https://github.com/ahmedhosnypro/MagisGate
 Builds:
   - versionName: 1.0.0
     versionCode: 1
-    commit: v1.0.0
+    commit: 7533eae779f11e816605677db2ce2f3237816428
     subdir: app
     gradle:
       - yes
